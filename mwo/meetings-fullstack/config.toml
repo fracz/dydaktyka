@@ -1,0 +1,5 @@
+baseURL = 'http://example.org/'
+languageCode = 'pl-pl'
+title = 'My New Hugo Site'
+theme = 'relearn'
+themesDir = '../../themes'
