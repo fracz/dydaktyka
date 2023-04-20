@@ -12,4 +12,4 @@ autentykacją, autoryzacją i persystencją danych.
 
 Po tym ćwiczeniu zostaniesz Full Stack Developerem.
 
-![](/fullstack2.jpg?lightbox=false)
+![](/fullstack2.png?lightbox=false)
