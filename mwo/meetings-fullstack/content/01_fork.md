@@ -1,10 +1,14 @@
 ---
 title: "Fork & Clone"
+menuTitle: Zdobądź projekt
 date: 2023-04-20T09:19:49+02:00
+weight: 1
 ---
 
 Sforkuj i sklonuj repozytorium ze startowym projektem na dzisiejsze zajęcia.
 
-[https://github.com/fracz/enroller-fullstack](https://github.com/fracz/enroller-fullstack)
+{{% button href="https://github.com/fracz/enroller-fullstack" %}} Przejdź do projektu na GitHubie {{% /button %}}
 
-Po sklonowaniu zaimportuj projekt do IDE.
+{{% notice style="info" title="Co po sklonowaniu?" icon="wrench" %}}
+Zaimportuj projekt do IntelliJ.
+{{% /notice %}}
