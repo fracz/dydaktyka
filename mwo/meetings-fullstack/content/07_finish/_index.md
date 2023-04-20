@@ -1,7 +1,7 @@
 ---
 title: "Dokończ aplikację"
 date: 2023-04-20T12:31:01+02:00
-weight: 7
+weight: 70
 ---
 
 Skoro autentykacja i autoryzacja jest za nami, pora dokończyć aplikację i tworzyć oraz

@@ -1,7 +1,7 @@
 ---
 title: "Zmiany w aplikacjach"
 date: 2023-04-20T09:19:49+02:00
-weight: 2
+weight: 20
 ---
 
 Na poprzednich zajęciach stworzyliśmy dwie aplikacje - backendową, która udostępnia REST API

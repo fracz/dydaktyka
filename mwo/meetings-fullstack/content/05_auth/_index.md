@@ -1,7 +1,7 @@
 ---
 title: "Autentykacja"
 date: 2023-04-20T12:31:01+02:00
-weight: 5
+weight: 50
 ---
 
 Przypomnij sobie jaki endpoint jest odpowiedzialny na backendzie za wystawienie tokena JWT

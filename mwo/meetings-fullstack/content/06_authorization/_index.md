@@ -1,7 +1,7 @@
 ---
 title: "Autoryzacja"
 date: 2023-04-20T12:31:01+02:00
-weight: 6
+weight: 60
 ---
 
 1. Po zalogowaniu przejmij token i skonfiguruj `axios` tak, by przy każdym następnym

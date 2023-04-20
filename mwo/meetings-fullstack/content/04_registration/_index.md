@@ -1,7 +1,7 @@
 ---
 title: "Rejestracja użytkowników"
 date: 2023-04-20T12:31:01+02:00
-weight: 4
+weight: 40
 ---
 
 Twoja aplikacja (frontend) nie pozwala na tworzenie kont użytkowników.
