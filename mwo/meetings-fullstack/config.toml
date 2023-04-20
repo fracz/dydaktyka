@@ -11,7 +11,7 @@ enableMissingTranslationPlaceholders = false
 canonifyurls = true
 
 [params]
-editURL = "https://edit.me"
+editURL = "https://github.com/fracz/dydaktyka/edit/main/mwo/meetings-fullstack/content/"
 author = "Wojciech Frącz"
 showVisitedLinks = false
 disableSearch = false

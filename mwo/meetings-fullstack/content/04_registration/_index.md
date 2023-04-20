@@ -15,8 +15,8 @@ komenda `npm run serve` wykonana w katalogu `src/main/frontend`.
 
 1. Stwórz komponent pozwalający na rejestrację użytkownika.
 1. Na stronie głównej aplikacji dodaj przycisk "zarejestruj", który pokaże formularz rejestracji.
-1. Dodaj do projektu zależność frontendową [`axios`](https://github.com/axios/axios).
-   Jest to biblioteka dostarczająca wygodną obsługę asynchronicznych wywołań HTTP.
+1. Dodaj do projektu bibliotekę [`axios`](https://github.com/axios/axios).
+   Dostarcza ona wygodną obsługę asynchronicznych żądań HTTP.
 1. Do obsługi rejestracji użytkownika po wysłaniu formularza możesz użyć poniższego kodu:
    ```js
    register(user) {
