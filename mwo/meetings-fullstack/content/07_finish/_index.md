@@ -6,3 +6,7 @@ weight: 7
 
 Skoro autentykacja i autoryzacja jest za nami, pora dokończyć aplikację i tworzyć oraz
 zapisywać spotkania z użyciem endpointów serwera.
+
+Jeśli nie udało Ci się wykonać poprzednich kroków lub coś innego poszło nie tak -
+aplikację z gotową rejestracją, autentykacją i autoryzacją znajdziesz na gałęzi
+`authorization`. Zobacz różnice lub po prostu przełącz się na nią, jeśli czujesz taką potrzebę.

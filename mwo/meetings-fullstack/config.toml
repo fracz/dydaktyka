@@ -14,7 +14,8 @@ canonifyurls = true
 editURL = "https://github.com/fracz/dydaktyka/edit/main/mwo/meetings-fullstack/content/"
 author = "Wojciech Frącz"
 showVisitedLinks = false
-disableSearch = false
+disableSearch = true
+disableBreadcrumb = true
 disableAssetsBusting = false
 disableInlineCopyToClipBoard = false
 disableShortcutsTitle = false
@@ -23,4 +24,4 @@ ordersectionsby = "weight"
 themeVariant = "green" # choose theme variant "green", "gold" , "gray", "blue" (default)
 
 [outputs]
-home = [ "HTML", "RSS", "SEARCH", "SEARCHPAGE" ]
+home = [ "HTML" ]
