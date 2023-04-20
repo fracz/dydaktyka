@@ -4,3 +4,23 @@ title = 'MWO - Meeting Fullstack'
 theme = 'relearn'
 themesDir = '../../themes'
 publishDir = '../../public/mwo/meetings-fullstack'
+
+defaultContentLanguage = "pl"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
+canonifyurls = true
+
+[params]
+editURL = "https://edit.me"
+author = "Wojciech Frącz"
+showVisitedLinks = false
+disableSearch = false
+disableAssetsBusting = false
+disableInlineCopyToClipBoard = false
+disableShortcutsTitle = false
+disableLanguageSwitchingButton = true
+ordersectionsby = "weight"
+themeVariant = "green" # choose theme variant "green", "gold" , "gray", "blue" (default)
+
+[outputs]
+home = [ "HTML", "RSS", "SEARCH", "SEARCHPAGE" ]
