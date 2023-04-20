@@ -1,6 +1,6 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://fracz.github.io/dydaktyka/mwo/meetings-fullstack'
 languageCode = 'pl-pl'
-title = 'My New Hugo Site'
+title = 'MWO - Meeting Fullstack'
 theme = 'relearn'
 themesDir = '../../themes'
 publishDir = '../../public/mwo/meetings-fullstack'
