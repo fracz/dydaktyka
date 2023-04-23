@@ -20,7 +20,7 @@ komenda `npm run serve` wykonana w katalogu `src/main/frontend`.
 1. Do obsługi rejestracji użytkownika po wysłaniu formularza możesz użyć poniższego kodu:
    ```js
    register(user) {
-     axios.post('participants', user)
+     axios.post('/api/participants', user)
          .then(response => {
              // udało się
          })
