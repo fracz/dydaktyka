@@ -14,7 +14,7 @@ weight: 60
    ```
 1. Po powyższej zmianie sprawdź, czy od razu po zalogowaniu możesz pobrać listę spotkań:
    ```js
-   axios.get('meetings').then(response => console.log(response.data));
+   axios.get('/api/meetings').then(response => console.log(response.data));
    ```
    Podglądnij w narzędziach developerskich żądania, odpowiedzi i ich nagłówki,
    które zostały wymienione.
