@@ -61,6 +61,17 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/mwo/meetings-fullstack"
+      - name: Build to/interfaces
+        working-directory: to/interfaces
+        env:
+          # For maximum backward compatibility with Hugo modules
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/to/interfaces"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

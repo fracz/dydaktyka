@@ -1,0 +1,27 @@
+baseURL = 'https://fracz.github.io/dydaktyka/to/interfaces'
+languageCode = 'pl-pl'
+title = 'TO - Kolekcje, interfejsy i abstrakcje'
+theme = 'relearn'
+themesDir = '../../themes'
+publishDir = '../../public/to/interfaces'
+
+defaultContentLanguage = "pl"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
+canonifyurls = true
+
+[params]
+editURL = "https://github.com/fracz/dydaktyka/edit/main/to/interfaces/content/"
+author = "Wojciech Frącz"
+showVisitedLinks = false
+disableSearch = true
+disableBreadcrumb = true
+disableAssetsBusting = false
+disableInlineCopyToClipBoard = false
+disableShortcutsTitle = false
+disableLanguageSwitchingButton = true
+ordersectionsby = "weight"
+themeVariant = "green" # choose theme variant "green", "gold" , "gray", "blue" (default)
+
+[outputs]
+home = [ "HTML" ]
