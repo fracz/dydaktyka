@@ -9,7 +9,7 @@ aplikacji.
 
 ### Formularz dodawania spotkań
 
-{{% tab title="`src/meetings/NewMeetingForm.js`" %}}
+{{% tab title="src/meetings/NewMeetingForm.js" %}}
 
 ```jsx {hl_lines="8,13"}
 import {useState} from "react";
@@ -46,9 +46,9 @@ formularza.
 
 ### Wyświetlanie listy spotkań
 
-```jsx
-// src/meetings/MeetingsList.js
+{{% tab title="src/meetings/MeetingsList.js" %}}
 
+```jsx {hl_lines="12"}
 export default function MeetingsList({meetings}) {
     return (
         <table>
@@ -71,6 +71,8 @@ export default function MeetingsList({meetings}) {
 }
 ```
 
+{{% /tab %}}
+
 Komponent odbiera listę spotkań do wyświetlenia w _propsach_. Zwróć uwagę
 jak wykorzystano metodę `map` tablicy, by przekształcić każde spotkanie z tablicy
 w wiersz tabeli w JSX. Każdy wygenerowany w ten sposób element musi otrzymać
@@ -79,9 +81,9 @@ W tym przypadku używamy po prostu jego indeksu w tablicy.
 
 ### Strona spotkań
 
-```jsx
-// src/meetings/MeetingsPage.js
+{{% tab title="src/meetings/MeetingsPage.js" %}}
 
+```jsx {hl_lines="9"}
 import {useState} from "react";
 import NewMeetingForm from "./NewMeetingForm";
 import MeetingsList from "./MeetingsList";
@@ -104,13 +106,15 @@ export default function MeetingsPage() {
 }
 ```
 
+{{% /tab %}}
+
 Tutaj z kolei na uwagę zasługuje sposób dodania do stanu będącego tablicą
 nowego spotkania. Zauważ, że nie wykorzystujemy tutaj metody `push`,
-ponieważ stan komnoentu jest niemutowalny! Zamiast tego tworzymy nową
+ponieważ stan komponentu jest niemutowalny! Zamiast tego tworzymy nową
 tablicę zawierającą wszystkie elementy z poprzedniego stanu plus
 nowe spotkanie, a następnie przekazujemy ją jako wartość do `setMeetings`.
 Tablica jest budowana z
-uzyciem [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
+użyciem [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
 ## Oczekiwane zachowanie aplikacji po tych krokach
 
