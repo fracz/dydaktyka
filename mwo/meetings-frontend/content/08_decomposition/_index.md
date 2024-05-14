@@ -40,9 +40,11 @@ Rodzic podaje wartości _propsów_ jako atrybuty HTMLowe przy tworzeniu instancj
         return <div>
             <label>Zaloguj się e-mailem</label>
             <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
-            <button type="button" onClick={() => props.onLogin(email)}>Wchodzę</button>
+            <button type="button" onClick={() => props.onLogin(email)}>
+                Wchodzę
+            </button>
         </div>;
-    }
+   }
    ```
    Zwróć uwagę, że komponent w wyniku kliknięcia przycisku woła funkcję `props.onLogin`.
    Komponent oczekuje, że zostanie ona przekazana od rodzica. Uzywamy też skróconego zapisu
@@ -83,7 +85,7 @@ różne funkcjonalności w systemie.
 
 {{% expand title="Spróbuj napisać **samodzielnie**, zanim klikniesz :-)" %}}
 
-```jsx {hl_lines="3,9"}
+```jsx {hl_lines="3,10"}
 import {useState} from "react";
 
 export default function LoginForm({onLogin, buttonLabel}) {
@@ -92,7 +94,9 @@ export default function LoginForm({onLogin, buttonLabel}) {
    return <div>
       <label>Zaloguj się e-mailem</label>
       <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
-      <button type="button" onClick={() => onLogin(email)}>{buttonLabel || 'Wchodzę'}</button>
+      <button type="button" onClick={() => onLogin(email)}>
+         {buttonLabel || 'Wchodzę'}
+      </button>
    </div>;
 }
 ```
@@ -112,7 +116,11 @@ JSX w komponencie `App` za pomocą operatora _ternary_:
 return (
         <div>
            <h1>System do zapisów na zajęcia</h1>
-           {loggedIn ? <UserPanel username={loggedIn} onLogout={logout}/> : <LoginForm onLogin={login}/>}
+           {
+              loggedIn
+                      ? <UserPanel username={loggedIn} onLogout={logout}/>
+                      : <LoginForm onLogin={login}/>
+           }
         </div>
 );
 ```
