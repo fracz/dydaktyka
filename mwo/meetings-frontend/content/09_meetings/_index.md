@@ -81,6 +81,8 @@ W tym przypadku używamy po prostu jego indeksu w tablicy.
 
 `src/meetings/MeetingsPage.js`
 
+{{% tab title="c" %}}
+
 ```jsx {hl_lines="9"}
 import {useState} from "react";
 import NewMeetingForm from "./NewMeetingForm";
@@ -103,6 +105,8 @@ export default function MeetingsPage() {
     )
 }
 ```
+
+{{% /tab %}}
 
 Tutaj z kolei na uwagę zasługuje sposób dodania do stanu będącego tablicą
 nowego spotkania. Zauważ, że nie wykorzystujemy tutaj metody `push`,
