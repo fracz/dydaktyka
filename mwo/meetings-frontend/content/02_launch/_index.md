@@ -1,8 +1,7 @@
 ---
 title: "React - uruchomienie aplikacji"
 menuTitle: Uruchomienie aplikacji
-date: 2023-04-20T09:19:49+02:00
-weight: 1
+weight: 20
 ---
 
 ## Uruchomienie aplikacji
