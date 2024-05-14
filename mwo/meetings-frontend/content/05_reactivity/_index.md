@@ -53,7 +53,7 @@ początkową. W tym celu podamy wartość do atrybutu `value` pochodzącą ze st
 komponentu. Zwróć uwagę na użycie klamerek zamiast apostrofów przy definicji
 atrybutu.
 
-```jsx
+```jsx {hl_lines="12"}
 function App() {
     const [email, setEmail] = useState('fracz@agh.edu.pl');
 

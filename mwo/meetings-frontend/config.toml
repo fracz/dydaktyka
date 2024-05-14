@@ -25,3 +25,7 @@ themeVariant = "green" # choose theme variant "green", "gold" , "gray", "blue" (
 
 [outputs]
 home = [ "HTML" ]
+
+[markup]
+  [markup.highlight]
+    lineNos = true
