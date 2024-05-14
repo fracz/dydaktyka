@@ -20,7 +20,7 @@ export default function NewMeetingForm({onSubmit}) {
 
     function submit(event) {
         event.preventDefault();
-        onSubmit({name, description});
+        onSubmit({title, description});
     }
 
     return (
@@ -61,7 +61,7 @@ export default function MeetingsList({meetings}) {
             <tbody>
             {
                 meetings.map((meeting, index) => <tr key={index}>
-                    <td>{meeting.name}</td>
+                    <td>{meeting.title}</td>
                     <td>{meeting.description}</td>
                 </tr>)
             }

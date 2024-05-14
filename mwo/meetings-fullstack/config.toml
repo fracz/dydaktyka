@@ -1,9 +1,9 @@
-baseURL = 'https://fracz.github.io/dydaktyka/mwo/meetings-fullstack'
+baseURL = 'https://fracz.github.io/dydaktyka/mwo/meetings-frontend'
 languageCode = 'pl-pl'
-title = 'MWO - Meeting Fullstack'
+title = 'MWO - Meetings Frontend'
 theme = 'relearn'
 themesDir = '../../themes'
-publishDir = '../../public/mwo/meetings-fullstack'
+publishDir = '../../public/mwo/meetings-frontend'
 
 defaultContentLanguage = "pl"
 defaultContentLanguageInSubdir= false
@@ -11,7 +11,7 @@ enableMissingTranslationPlaceholders = false
 canonifyurls = true
 
 [params]
-editURL = "https://github.com/fracz/dydaktyka/edit/main/mwo/meetings-fullstack/content/"
+editURL = "https://github.com/fracz/dydaktyka/edit/main/mwo/meetings-frontend/content/"
 author = "Wojciech Frącz"
 showVisitedLinks = false
 disableSearch = true
@@ -23,5 +23,17 @@ disableLanguageSwitchingButton = true
 ordersectionsby = "weight"
 themeVariant = "green" # choose theme variant "green", "gold" , "gray", "blue" (default)
 
+  [params.imageEffects]
+    border = true
+    lazy = true
+    lightbox = false
+    shadow = false
+
 [outputs]
 home = [ "HTML" ]
+
+[markup]
+  [markup.highlight]
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = false
