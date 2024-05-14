@@ -14,7 +14,9 @@ za pomocą funkcji `alert`.
 {{% expand title="Spróbuj napisać **samodzielnie**, zanim klikniesz :-)" %}}
 
 ```jsx
-<button type="button" onClick={() => alert(email)}>Wyświetl mój e-mail w alercie</button>
+<button type="button" onClick={() => alert(email)}>
+    Wyświetl mój e-mail w alercie
+</button>
 ```
 
 {{% /expand %}}
