@@ -9,7 +9,7 @@ aplikacji.
 
 ### Formularz dodawania spotkań
 
-{{% tab title="src/meetings/NewMeetingForm.js" %}}
+src/meetings/NewMeetingForm.js
 
 ```jsx {hl_lines="8,13"}
 import {useState} from "react";
@@ -36,8 +36,6 @@ export default function NewMeetingForm({onSubmit}) {
 }
 ```
 
-{{% /tab %}}
-
 Na uwagę zasługuje obsłużenie zdarzenia `onSubmit` na formularzu, dzięki
 czemu będzie działać zatwierdzanie wpisanych danych za pomocą klawisza
 <kbd>Enter</kbd> w polu z nazwą. Kod `event.preventDefault()` anuluje
@@ -46,6 +44,7 @@ formularza.
 
 ### Wyświetlanie listy spotkań
 
+{{< tabs >}}
 {{% tab title="src/meetings/MeetingsList.js" %}}
 
 ```jsx {hl_lines="12"}
@@ -72,6 +71,7 @@ export default function MeetingsList({meetings}) {
 ```
 
 {{% /tab %}}
+{{< /tabs >}}
 
 Komponent odbiera listę spotkań do wyświetlenia w _propsach_. Zwróć uwagę
 jak wykorzystano metodę `map` tablicy, by przekształcić każde spotkanie z tablicy
@@ -81,9 +81,9 @@ W tym przypadku używamy po prostu jego indeksu w tablicy.
 
 ### Strona spotkań
 
-{{% tab title="src/meetings/MeetingsPage.js" %}}
+```jsx {hl_lines="11"}
+// src/meetings/MeetingsPage.js
 
-```jsx {hl_lines="9"}
 import {useState} from "react";
 import NewMeetingForm from "./NewMeetingForm";
 import MeetingsList from "./MeetingsList";
@@ -105,8 +105,6 @@ export default function MeetingsPage() {
     )
 }
 ```
-
-{{% /tab %}}
 
 Tutaj z kolei na uwagę zasługuje sposób dodania do stanu będącego tablicą
 nowego spotkania. Zauważ, że nie wykorzystujemy tutaj metody `push`,
