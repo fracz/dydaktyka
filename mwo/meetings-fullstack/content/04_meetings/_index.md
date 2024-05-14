@@ -10,14 +10,12 @@ Dodaj taką funkcjonalność.
 
 {{% notice style="info" title="Uruchom serwer frontendu" icon="wrench" %}}
 Pamiętaj o uruchomieniu dev-servera przy pisaniu frontendu -
-komenda `npm run serve` wykonana w katalogu `src/main/frontend`.
+komenda `npm start` wykonana w katalogu `src/main/frontend`.
 {{% /notice %}}
 
-1. Stwórz komponent pozwalający na rejestrację użytkownika.
-1. Na stronie głównej aplikacji dodaj przycisk "zarejestruj", który pokaże formularz rejestracji.
-1. Dodaj do projektu bibliotekę [`axios`](https://github.com/axios/axios).
-   Dostarcza ona wygodną obsługę asynchronicznych żądań HTTP.
-1. Do obsługi rejestracji użytkownika po wysłaniu formularza możesz użyć poniższego kodu:
+1. Znajdź komponent, który reaguje na dodanie nowego spotkania.
+1. Zanim dodasz spotkanie do listy, wyślij odpowiednie żądanie na backend. Pokaż użytkownikowi,
+   że spotkanie się dodało dopiero gdy backend potwierdzi wykonanie operacji.
    ```js
    register(user) {
      axios.post('/api/participants', user)
