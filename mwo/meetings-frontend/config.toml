@@ -22,6 +22,11 @@ disableShortcutsTitle = false
 disableLanguageSwitchingButton = true
 ordersectionsby = "weight"
 themeVariant = "green" # choose theme variant "green", "gold" , "gray", "blue" (default)
+  [params.imageEffects]
+    border = true
+    lazy = true
+    lightbox = false
+    shadow = false
 
 [outputs]
 home = [ "HTML" ]

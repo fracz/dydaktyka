@@ -67,3 +67,7 @@ function App() {
 
 Zwróć uwagę, w jaki sposób zdefiniowaliśmy funkcję wewnątrz komponentu
 oraz jak wywołujemy ją w reakcji na zdarzenie generowane z pola tekstowego.
+
+{{% notice style="note" title="Pamiętaj!" icon="exclamation-circle" %}}
+Zacommituj zmiany i wyślij je na GitHuba.
+{{% /notice %}}

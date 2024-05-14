@@ -108,3 +108,7 @@ if (email.length < 10) {
 ```
 
 {{% /expand %}}
+
+{{% notice style="note" title="Pamiętaj!" icon="exclamation-circle" %}}
+Zacommituj zmiany i wyślij je na GitHuba.
+{{% /notice %}}
