@@ -35,5 +35,3 @@ home = [ "HTML" ]
 [markup]
   [markup.highlight]
     lineNos = true
-    lineNumbersInTable = false
-    noClasses = false

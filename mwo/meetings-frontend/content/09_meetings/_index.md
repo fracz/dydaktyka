@@ -9,13 +9,13 @@ aplikacji.
 
 ### Formularz dodawania spotkań
 
-src/meetings/NewMeetingForm.js
+`src/meetings/NewMeetingForm.js`
 
 ```jsx {hl_lines="8,13"}
 import {useState} from "react";
 
 export default function NewMeetingForm({onSubmit}) {
-    const [name, setName] = useState('');
+    const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
 
     function submit(event) {
@@ -27,9 +27,11 @@ export default function NewMeetingForm({onSubmit}) {
         <form onSubmit={submit}>
             <h3>Dodaj nowe spotkanie</h3>
             <label>Nazwa</label>
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
+            <input type="text" value={title}
+                   onChange={(e) => setTitle(e.target.value)}/>
             <label>Opis</label>
-            <textarea value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
+            <textarea value={description}
+                      onChange={(e) => setDescription(e.target.value)}></textarea>
             <button>Dodaj</button>
         </form>
     );
@@ -44,8 +46,7 @@ formularza.
 
 ### Wyświetlanie listy spotkań
 
-{{< tabs >}}
-{{% tab title="src/meetings/MeetingsList.js" %}}
+`src/meetings/MeetingsList.js`
 
 ```jsx {hl_lines="12"}
 export default function MeetingsList({meetings}) {
@@ -70,9 +71,6 @@ export default function MeetingsList({meetings}) {
 }
 ```
 
-{{% /tab %}}
-{{< /tabs >}}
-
 Komponent odbiera listę spotkań do wyświetlenia w _propsach_. Zwróć uwagę
 jak wykorzystano metodę `map` tablicy, by przekształcić każde spotkanie z tablicy
 w wiersz tabeli w JSX. Każdy wygenerowany w ten sposób element musi otrzymać
@@ -81,9 +79,9 @@ W tym przypadku używamy po prostu jego indeksu w tablicy.
 
 ### Strona spotkań
 
-```jsx {hl_lines="11"}
-// src/meetings/MeetingsPage.js
+`src/meetings/MeetingsPage.js`
 
+```jsx {hl_lines="9"}
 import {useState} from "react";
 import NewMeetingForm from "./NewMeetingForm";
 import MeetingsList from "./MeetingsList";
