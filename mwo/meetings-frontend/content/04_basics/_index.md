@@ -28,7 +28,7 @@ Jeśli wewnątrz definicji bloku JSX chcesz "uciec" z powrotem do języka JS -
 musisz użyć klamerek `{}`. Dzięki nim możesz w dowolne miejsce wstawić wartość
 zmiennej z komponentu.
 
-```js
+```jsx
 function App() {
     let email = 'fracz@agh.edu.pl';
 
