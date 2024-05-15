@@ -38,5 +38,5 @@ function App() {
 W ten sposób można wybudować całą aplikację, wskazując tylko Reactowi
 jeden główny komponent, od którego renderowanie ma się rozpocząć.
 
-![Components](intro-components.png?lightbox=false)
+![Components](intro-components.png)
 

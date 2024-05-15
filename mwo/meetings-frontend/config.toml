@@ -12,7 +12,7 @@ canonifyurls = true
 
 [params]
 editURL = "https://github.com/fracz/dydaktyka/edit/main/mwo/meetings-frontend/content/"
-author = "Wojciech Frącz"
+author.name = "Wojciech Frącz"
 showVisitedLinks = false
 disableSearch = true
 disableBreadcrumb = true
