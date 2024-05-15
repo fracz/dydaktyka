@@ -1,6 +1,6 @@
 ---
 title: "React - reaktywność"
-menuTitle: Reaktywność
+linkTitle: Reaktywność
 weight: 50
 ---
 

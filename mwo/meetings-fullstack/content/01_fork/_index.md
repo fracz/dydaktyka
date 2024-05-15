@@ -1,6 +1,6 @@
 ---
 title: "Fork & Clone"
-menuTitle: Zdobądź projekt
+linkTitle: Zdobądź projekt
 date: 2023-04-20T09:19:49+02:00
 weight: 1
 ---

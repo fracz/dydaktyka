@@ -1,6 +1,6 @@
 ---
 title: "React - komponenty"
-menuTitle: Komponenty / JSX
+linkTitle: Komponenty / JSX
 weight: 40
 ---
 

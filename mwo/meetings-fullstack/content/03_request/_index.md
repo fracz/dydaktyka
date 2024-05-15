@@ -1,6 +1,6 @@
 ---
 title: "Żądanie - odpowiedź (przypomnienie)"
-menuTitle: Żądania HTTP
+linkTitle: Żądania HTTP
 date: 2023-04-20T12:31:01+02:00
 weight: 30
 ---

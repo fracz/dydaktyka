@@ -1,6 +1,6 @@
 ---
 title: Dekompozycja aplikacji na komponenty
-menuTitle: Dekompozycja
+linkTitle: Dekompozycja
 weight: 80
 ---
 

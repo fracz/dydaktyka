@@ -1,6 +1,6 @@
 ---
 title: Dokończ aplikację
-menuTitle: Zakończenie
+linkTitle: Zakończenie
 weight: 100
 ---
 

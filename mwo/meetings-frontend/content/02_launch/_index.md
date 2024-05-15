@@ -1,6 +1,6 @@
 ---
 title: "React - uruchomienie aplikacji"
-menuTitle: Uruchomienie aplikacji
+linkTitle: Uruchomienie aplikacji
 weight: 20
 ---
 

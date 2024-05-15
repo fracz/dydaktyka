@@ -1,6 +1,6 @@
 ---
 title: "React - interakcje"
-menuTitle: Interakcje
+linkTitle: Interakcje
 weight: 60
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Komponenty pozwalające na dodanie zajęć
-menuTitle: Dodawanie zajęć
+linkTitle: Dodawanie zajęć
 weight: 90
 ---
 

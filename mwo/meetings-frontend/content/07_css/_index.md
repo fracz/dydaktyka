@@ -1,6 +1,6 @@
 ---
 title: Framework CSS
-menuTitle: Framework CSS
+linkTitle: Framework CSS
 weight: 70
 ---
 
