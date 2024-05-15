@@ -1,12 +1,9 @@
 ---
-title: "Rejestracja użytkowników"
-date: 2023-04-20T12:31:01+02:00
+title: "Dodawanie spotkań"
 weight: 40
 ---
 
-Twoja aplikacja (frontend) nie pozwala na tworzenie kont użytkowników.
-
-Dodaj taką funkcjonalność.
+Dodaj komunikację aplikacji frontendowej i backendowej przy dodawaniu spotkań.
 
 {{% notice style="info" title="Uruchom serwer frontendu" icon="wrench" %}}
 Pamiętaj o uruchomieniu dev-servera przy pisaniu frontendu -
@@ -15,20 +12,23 @@ komenda `npm start` wykonana w katalogu `src/main/frontend`.
 
 1. Znajdź komponent, który reaguje na dodanie nowego spotkania.
 1. Zanim dodasz spotkanie do listy, wyślij odpowiednie żądanie na backend. Pokaż użytkownikowi,
-   że spotkanie się dodało dopiero gdy backend potwierdzi wykonanie operacji.
-   ```js
-   register(user) {
-     axios.post('/api/participants', user)
-         .then(response => {
-             // udało się
-         })
-         .catch(response => {
-             // nie udało sie     
-         });
+   że spotkanie się dodało, dopiero gdy backend potwierdzi wykonanie operacji.
+   ```jsx
+   async function handleNewMeeting(meeting) {
+    const response = await fetch('/api/meetings', {
+        method: 'POST',
+        body: JSON.stringify(meeting),
+        headers: { 'Content-Type': 'application/json' }
+    });
+    if (response.ok) {
+        const nextMeetings = [...meetings, meeting];
+        setMeetings(nextMeetings);
+        setAddingNewMeeting(false);
+    }
    }
    ```
+   O tym kodzie porozmawiamy sporo na zajęciach :-)
 1. Sprawdź działanie aplikacji. Podglądnij asynchroniczne żądania w karcie *Network* w narzędziach
    deweloperskich.
-   ![](devtools.png?ligtbox=false)
-2. Co się dzieje, gdy spróbujesz dodać dwa razy użytkownika z taką samą nazwą? Powiadom użytkownika w GUI
-   o tym problemie.
+2. Sprawdź, czy spotkanie rzeczywiście się dodaje - zobacz w przegląðarce odpowiedź z endpointa
+   `/api/meetings`.
