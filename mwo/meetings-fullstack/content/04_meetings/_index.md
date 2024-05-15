@@ -30,5 +30,10 @@ komenda `npm start` wykonana w katalogu `src/main/frontend`.
    O tym kodzie porozmawiamy sporo na zajęciach :-)
 1. Sprawdź działanie aplikacji. Podglądnij asynchroniczne żądania w karcie *Network* w narzędziach
    deweloperskich.
-2. Sprawdź, czy spotkanie rzeczywiście się dodaje - zobacz w przegląðarce odpowiedź z endpointa
-   `/api/meetings`.
+2. Sprawdź, czy spotkanie rzeczywiście się dodaje - zobacz w przeglądarce odpowiedź z endpointa
+   `/api/meetings`. Powinna ona być dostępna lokalnie pod adresem
+   [localhost:8080/api/meetings](http://localhost:8080/api/meetings).
+
+{{% notice style="note" title="Pamiętaj!" icon="exclamation-circle" %}}
+Zacommituj zmiany i wyślij je na GitHuba.
+{{% /notice %}}
