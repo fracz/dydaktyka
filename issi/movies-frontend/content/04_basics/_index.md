@@ -11,16 +11,13 @@ zaczynali "od zera".
 function App() {
     return (
         <div>
-            <h1>System do zapisów na zajęcia</h1>
+            <h1>My favourite movies to watch</h1>
         </div>
     );
 }
 
 export default App;
 ```
-
-Nie omówiliśmy modułów w JS (odsyłam: [Modules](https://javascript.info/modules-intro)),
-ale potraktuj `export default App` na końcu pliku jako "udostępnij z tego pliku następującą implementację komponentu".
 
 ## Zmienne w JSX
 
@@ -30,12 +27,12 @@ zmiennej z komponentu.
 
 ```jsx
 function App() {
-    let email = 'fracz@agh.edu.pl';
+    let title = 'Wall-E';
 
     return (
         <div>
-            <h1>System do zapisów na zajęcia</h1>
-            <h2>Twój e-mail to {email}</h2>
+            <h1>My favourite movies to watch</h1>
+            <h2>My favourite movie for today is {title}</h2>
         </div>
     );
 }
@@ -49,7 +46,7 @@ do komponentu pole tekstowe i wypisz na konsolę jego wartość przy każdej zmi
 
 ```jsx
 function App() {
-    let email = 'fracz@agh.edu.pl';
+    let title = 'Wall-E';
 
     function handleChange(event) {
         console.log(event.target.value);
@@ -57,8 +54,8 @@ function App() {
 
     return (
         <div>
-            <h1>System do zapisów na zajęcia</h1>
-            <h2>Twój e-mail to {email}.</h2>
+            <h1>My favourite movies to watch</h1>
+            <h2>My favourite movie for today is {title}</h2>
             <input type="text" onChange={handleChange}/>
         </div>
     );

@@ -4,13 +4,13 @@ linkTitle: Reaktywność
 weight: 50
 ---
 
-Co się stanie, jeśli w obsłudze zdarzenia zmienimy wartość zmiennej `email`?
+Co się stanie, jeśli w obsłudze zdarzenia zmienimy wartość zmiennej `title`?
 
 ```js
-let email = 'fracz@agh.edu.pl';
+let title = 'Wall-E';
 
 function handleChange(event) {
-    email = event.target.value;
+    title = event.target.value;
 }
 ```
 
@@ -26,10 +26,10 @@ W tym celu użyjemy pierwszego _hooka_ Reactowego - `useState`.
 import {useState} from "react";
 
 function App() {
-    const [email, setEmail] = useState('fracz@agh.edu.pl');
+    const [title, setTitle] = useState('Wall-E');
 
     function handleChange(event) {
-        setEmail(event.target.value);
+        setTitle(event.target.value);
     }
 
 // ...
@@ -40,13 +40,13 @@ to wartość domyślna stanu (przy pierwszym renderowaniu komponentu). Zwraca on
 tablicę, w której pierwszy element to zmienna z aktualnym stanem komponentu, a drugi to funkcja
 pozwalająca ten stan zmienić tak, by React się o tym dowiedział i ponownie wyrenderował komponent.
 
-Składnia `const [email, setEmail] = ...` to [_Destructuring
+Składnia `const [title, setTitle] = ...` to [_Destructuring
 assignment_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 pozwalające na szybkie stworzenie zmiennych z kolejnych elementów w tablicy.
 
 Jak się teraz zachowuje aplikacja?
 
-![Reactive](12-reactive.gif)
+![Reactive](12-reactive.webm)
 
 Do pełni szczęścia brakuje jedynie wypełnienia pola tekstowego wartością
 początkową. W tym celu podamy wartość do atrybutu `value` pochodzącą ze stanu
@@ -55,17 +55,17 @@ atrybutu.
 
 ```jsx {hl_lines="12"}
 function App() {
-    const [email, setEmail] = useState('fracz@agh.edu.pl');
+    const [title, setTitle] = useState('Wall-E');
 
     function handleChange(event) {
-        setEmail(event.target.value);
+        setTitle(event.target.value);
     }
 
     return (
         <div>
-            <h1>System do zapisów na zajęcia</h1>
-            <h2>Twój e-mail to {email}</h2>
-            <input type="text" value={email} onChange={handleChange}/>
+            <h1>My favourite movies to watch</h1>
+            <h2>My favourite movie for today is {title}</h2>
+            <input type="text" value={title} onChange={handleChange}/>
         </div>
     );
 }
@@ -80,7 +80,7 @@ nowo ustawioną wartość, a zwrócony JSX wyrenderuje się ponownie dla nowych 
 
 {{% notice style="tip" title="Pamiętaj!" icon="exclamation-circle" %}}
 Niezwykle istotne jest, by nigdy nie modyfikować stanu komponentu bezpośrednio
-(np. poprzez przypisanie wartości do `email` w powyższym przypadku). Stan komponentu
+(np. poprzez przypisanie wartości do `title` w powyższym przypadku). Stan komponentu
 należy modyfikować jedynie przy użyciu dostarczonego przez `useState` settera.
 Stan komponentu z punktu widzenia funkcji renderującej jest _immutable_.
 {{% /notice %}}
@@ -90,7 +90,7 @@ Ten mechanizm nazywamy _reaktywnością_ i stąd też wzięła się nazwa framew
 ### Warunki logiczne w szablonie
 
 W jaki sposób wyrenderować jeden z konkretnych elementów? Spróbuj pokazać
-użytkownikowi odpowiedni komunikat na podstawie długości jego adresu e-mail.
+użytkownikowi odpowiedni komunikat na podstawie długości wpisanego tytułu filmu.
 
 ![Reactive](13-reactive.gif)
 
@@ -98,13 +98,15 @@ użytkownikowi odpowiedni komunikat na podstawie długości jego adresu e-mail.
 
 ```js
 let message;
-if (email.length < 10) {
-    message = <div>Ale masz krótki adres!</div>;
-} else if (email.length < 15) {
-    message = <div>Twój adres e-mail jest w sam raz.</div>;
+if (title.length < 5) {
+    message = <div>Tutuł jest za krótki. Nagrywają takie filmy?</div>;
+} else if (title.length < 15) {
+    message = <div>Tytuł jest ekstra, w sam raz na plakat przed kinem!</div>;
 } else {
-    message = <div>Twój adres e-mail jest stanowczo za długi.</div>;
+    message = <div>Tytuł jest za długi, nikt tego nie zapamięta.</div>;
 }
+// ...
+<div>{message}</div>
 ```
 
 {{% /expand %}}
@@ -112,3 +114,11 @@ if (email.length < 10) {
 {{% notice style="note" title="Pamiętaj!" icon="exclamation-circle" %}}
 Zacommituj zmiany i wyślij je na GitHuba.
 {{% /notice %}}
+
+{{% notice style="info" title="Czy wiesz że?" icon="question-circle" %}}
+Za jeden z najdłuższych tytułów filmów uznaje
+się [Night of the Day of the Dawn of the Son of the Bride of the Return of the Revenge of the Terror of the Attack of the Evil, Mutant, Alien, Flesh Eating, Hellbound, Zombified Living Dead Part 2: In Shocking 2-D](https://pl.wikipedia.org/wiki/Night_of_the_Day_of_the_Dawn_of_the_Son_of_the_Bride_of_the_Return_of_the_Revenge_of_the_Terror_of_the_Attack_of_the_Evil,_Mutant,_Alien,_Flesh_Eating,_Hellbound,_Zombified_Living_Dead_Part_2:_In_Shocking_2-D).
+W recencjach często skracano go jako *NOTDOT*.
+{{% /notice %}}
+
+
