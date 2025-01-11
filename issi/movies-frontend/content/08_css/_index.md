@@ -1,7 +1,7 @@
 ---
 title: Framework CSS
 linkTitle: Framework CSS
-weight: 70
+weight: 80
 ---
 
 Większość z nas bez wsparcia od grafików nie potrafi stworzyć ładnego interfejsu
@@ -23,7 +23,7 @@ Aby zainstalować nową bibliotekę w projekcie:
     ```
 1. Uruchom aplikację. Powinna wyglądać mniej więcej tak:
 
-   ![](16-milligram.jpg)
+   ![](16-milligram.png)
 
 {{% notice style="note" title="Pamiętaj!" icon="exclamation-circle" %}}
 Zacommituj zmiany i wyślij je na GitHuba.

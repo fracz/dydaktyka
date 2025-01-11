@@ -46,7 +46,7 @@ pozwalające na szybkie stworzenie zmiennych z kolejnych elementów w tablicy.
 
 Jak się teraz zachowuje aplikacja?
 
-![Reactive](12-reactive.webm)
+![Reactive](12-reactive.gif)
 
 Do pełni szczęścia brakuje jedynie wypełnienia pola tekstowego wartością
 początkową. W tym celu podamy wartość do atrybutu `value` pochodzącą ze stanu
@@ -91,6 +91,7 @@ Ten mechanizm nazywamy _reaktywnością_ i stąd też wzięła się nazwa framew
 
 W jaki sposób wyrenderować jeden z konkretnych elementów? Spróbuj pokazać
 użytkownikowi odpowiedni komunikat na podstawie długości wpisanego tytułu filmu.
+Dodatkowo, nie pokazuj komunikatu w ogóle, jeśli tytuł nie jest wpisany.
 
 ![Reactive](13-reactive.gif)
 
@@ -106,7 +107,9 @@ if (title.length < 5) {
     message = <div>Tytuł jest za długi, nikt tego nie zapamięta.</div>;
 }
 // ...
-<div>{message}</div>
+{
+    title.length > 0 && <div>{message}</div>
+}
 ```
 
 {{% /expand %}}

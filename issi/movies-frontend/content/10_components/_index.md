@@ -1,7 +1,7 @@
 ---
 title: Komponenty pozwalające na dodanie zajęć
 linkTitle: Dodawanie zajęć
-weight: 90
+weight: 100
 ---
 
 Poniżej znajdziesz kod dla podstawowych komponentów obsługujących spotkania w naszej

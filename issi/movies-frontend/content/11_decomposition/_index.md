@@ -1,7 +1,7 @@
 ---
 title: Dekompozycja aplikacji na komponenty
 linkTitle: Dekompozycja
-weight: 80
+weight: 100
 ---
 
 Powiedzieliśmy na początku, że aplikacja frontendowa składa się z komponentów, tymczasem
