@@ -100,11 +100,11 @@ Dodatkowo, nie pokazuj komunikatu w ogóle, jeśli tytuł nie jest wpisany.
 ```js
 let message;
 if (title.length < 5) {
-    message = <div>Tutuł jest za krótki. Nagrywają takie filmy?</div>;
+    message = "Tutuł jest za krótki. Nagrywają takie filmy?";
 } else if (title.length < 15) {
-    message = <div>Tytuł jest ekstra, w sam raz na plakat przed kinem!</div>;
+    message = "Tytuł jest ekstra, w sam raz na plakat przed kinem!";
 } else {
-    message = <div>Tytuł jest za długi, nikt tego nie zapamięta.</div>;
+    message = "Tytuł jest za długi, nikt tego nie zapamięta.";
 }
 // ...
 {
