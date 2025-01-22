@@ -37,8 +37,8 @@ Rodzic podaje wartości _propsów_ jako atrybuty HTMLowe przy tworzeniu instancj
    import {useState} from "react";
    
    export default function MovieForm(props) {
-   const [title, setTitle] = useState('');
-   const [year, setYear] = useState('');
+       const [title, setTitle] = useState('');
+       const [year, setYear] = useState('');
    
        function addMovie(event) {
            event.preventDefault();
