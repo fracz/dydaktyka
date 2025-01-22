@@ -25,6 +25,13 @@ Aby zainstalować nową bibliotekę w projekcie:
 
    ![](16-milligram.png)
 
+Warto dodać też klasę `container` do głównego elementu w komponencie `App`,
+dzięki czemu aplikacja będzie się dobrze prezentować także na szerokich ekranach.
+
+```jsx
+<div className="container">
+```
+
 {{% notice style="note" title="Pamiętaj!" icon="exclamation-circle" %}}
 Zacommituj zmiany i wyślij je na GitHuba.
 {{% /notice %}}
