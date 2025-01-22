@@ -72,6 +72,17 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/issi/movies-frontend"
+      - name: Build issi/movies-fullstack
+        working-directory: issi/movies-fullstack
+        env:
+          # For maximum backward compatibility with Hugo modules
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/issi/movies-fullstack"
       - name: Build mwo/meetings-fullstack
         working-directory: mwo/meetings-fullstack
         env:

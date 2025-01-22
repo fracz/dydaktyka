@@ -1,9 +1,9 @@
-baseURL = 'https://fracz.github.io/dydaktyka/issi/movies-frontend'
+baseURL = 'https://fracz.github.io/dydaktyka/issi/movies-fullstack'
 languageCode = 'pl-pl'
-title = 'Movies Frontend'
+title = 'Movies Fullstack'
 theme = 'relearn'
 themesDir = '../../themes'
-publishDir = '../../public/issi/movies-frontend'
+publishDir = '../../public/issi/movies-fullstack'
 
 defaultContentLanguage = "pl"
 defaultContentLanguageInSubdir= false
@@ -11,7 +11,7 @@ enableMissingTranslationPlaceholders = false
 canonifyurls = true
 
 [params]
-editURL = "https://github.com/fracz/dydaktyka/edit/main/issi/movies-frontend/content/"
+editURL = "https://github.com/fracz/dydaktyka/edit/main/issi/movies-fullstack/content/"
 author.name = "Wojciech Frącz"
 showVisitedLinks = false
 disableSearch = true
