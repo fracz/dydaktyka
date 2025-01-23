@@ -1,7 +1,7 @@
 ---
 title: "Deployment"
 date: 2023-04-20T09:19:49+02:00
-weight: 5
+weight: 100
 ---
 
 Uruchom aplikację z Twojego sforkowanego repozytorium na platformie

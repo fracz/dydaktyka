@@ -8,13 +8,13 @@ Spróbuj dodać funkcjonalność usuwania spotkań na podstawie dotychczasowych 
 {{% expand title="Spróbuj napisać **samodzielnie**, zanim klikniesz :-)" %}}
 
 ```jsx
-async function handleDeleteMeeting(meeting) {
-    const response = await fetch(`/api/meetings/${meeting.id}`, {
+async function handleDeleteMovie(movie) {
+    const response = await fetch(`/movies/${movie.id}`, {
         method: 'DELETE',
     });
     if (response.ok) {
-        const nextMeetings = meetings.filter(m => m !== meeting);
-        setMeetings(nextMeetings);
+        const nextMovies = movies.filter(m => m !== movie);
+        setMovies(nextMovies);
     }
 }
 ```

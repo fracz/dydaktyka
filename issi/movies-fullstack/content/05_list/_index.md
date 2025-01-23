@@ -23,14 +23,14 @@ Całość wygląda tak:
 
 ```jsx
 useEffect(() => {
-    const fetchMeetings = async () => {
-        const response = await fetch(`/api/meetings`);
+    const fetchMovies = async () => {
+        const response = await fetch(`/movies`);
         if (response.ok) {
-            const meetings = await response.json();
-            setMeetings(meetings);
+            const movies = await response.json();
+            setMovies(movies);
         }
     };
-    fetchMeetings();
+    fetchMovies();
 }, []);
 ```
 
