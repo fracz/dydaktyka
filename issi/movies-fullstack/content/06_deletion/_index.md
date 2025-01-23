@@ -1,9 +1,9 @@
 ---
-title: "Usuwanie spotkań"
+title: "Usuwanie filmów"
 weight: 60
 ---
 
-Spróbuj dodać funkcjonalność usuwania spotkań na podstawie dotychczasowych informacji.
+Spróbuj dodać funkcjonalność usuwania filmów na podstawie dotychczasowych informacji.
 
 {{% expand title="Spróbuj napisać **samodzielnie**, zanim klikniesz :-)" %}}
 
@@ -21,7 +21,7 @@ async function handleDeleteMovie(movie) {
 
 {{% /expand %}}
 
-Upewnij się, że da się usunąć spotkanie, które przed chwilą zostało dodane. Jeśli
+Upewnij się, że da się usunąć film, który przed chwilą został dodany. Jeśli
 zidentyfikujesz tutaj jakiś problem, spróbuj go naprawić.
 
 {{% notice style="note" title="Pamiętaj!" icon="exclamation-circle" %}}

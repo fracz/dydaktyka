@@ -1,10 +1,10 @@
 ---
-title: "Pobieranie spotkań"
+title: "Pobieranie filmów"
 weight: 50
 ---
 
-Po dodaniu spotkań są one publikowane w endpoincie `/api/meetings`. Skorzystajmy z niego,
-aby wyświetlić użytkownikowi listę istniejących spotkań po wejściu do aplikacji.
+Po dodaniu filmów są one publikowane w endpoincie `/movies`. Skorzystajmy z niego,
+aby wyświetlić użytkownikowi listę istniejących filmów po wejściu do aplikacji.
 
 W tym celu przy pierwszym wyrenderowaniu komponentu konieczne jest skomunikowanie się z API
 i ustalenie stanu komponentu na podstawie uzyskanej odpowiedzi. W tym celu skorzystamy
@@ -15,7 +15,7 @@ z zewnętrznym systemem.
 Hook przyjmuje funkcję, która zostanie wykonana podczas pierwszego renderowania
 komponentu (_setup code_). Drugi argument funkcji to tablica stanów, których zmiana
 powinna spowodować ponowne wykonanie tego kodu (np. ponowne pobranie danych). W naszym
-przypadku ta tablica jest pusta, ponieważ zawsze chcemy pobrać listę wszystkich spotkań
+przypadku ta tablica jest pusta, ponieważ zawsze chcemy pobrać listę wszystkich filmów
 i chcemy zrobić to tylko raz. `useEffect` nie może także przyjąć funkcji asynchronicznej,
 dlatego definiujemy ją wewnątrz zwykłej funkcji strzałkowej.
 
@@ -34,11 +34,11 @@ useEffect(() => {
 }, []);
 ```
 
-Sprawdź, czy po wejściu w aplikację na liście pojawiają się dodane do bazy danych spotkania.
+Sprawdź, czy po wejściu w aplikację na liście pojawiają się dodane do bazy danych filmy.
 
 {{% notice style="info" title="Pamiętaj!" icon="question-circle" %}}
 W narzędziach deweloperskich możesz zwrócić uwagę na fakt, że żądanie do
-`/api/meetings` jest wykonywane dwukrotnie. Dzieje się tak przez mechanizm
+`/movies` jest wykonywane dwukrotnie. Dzieje się tak przez mechanizm
 wykrywający potencjalne problemy z komponentami. W trybie deweloperskim
 React renderuje komponenty dwukrotnie i upewnia się, że efekt jest taki sam.
 Pozwala to wykryć niektóre problemy w trakcie pracy nad aplikacją. Mechanizm ten
