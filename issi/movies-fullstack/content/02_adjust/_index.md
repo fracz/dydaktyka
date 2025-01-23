@@ -8,41 +8,26 @@ Na poprzednich zajęciach stworzyliśmy dwie aplikacje - backendową, która udo
 oraz frontendową, która udaje, że z niego korzysta.
 
 Na początek zajęć udostępniam projekt, który połączył te dwa światy w jeden.
-Aplikacja w Spring Boot od razu serwuje zbudowane pliki frontendu.
-Kod frontendu znalazł się w katalogu `src/main/frontend`.
-Po wejściu na stronę główną uruchomionej aplikacji
-zobaczysz aplikację frontendową.
-
-Stworzone endpointy backendowe dostępne są po prefixie `/api`.
+Aplikacja w Fast API znalazla się w katalogu `api`.
+Kod frontendu natomiast został umieszczony w katalogu `ui`.
 
 Oto lista zmian w stosunku do stanu aplikacji z poprzednich zajęć:
 
-1. Utworzyłem katalog `src/main/frontend` i wrzuciłem do niego całą zawartość projektu
-   frontendowego z ostatnich zajęć. Aplikacja jest w takim stanie, w jakim powinna
-   być po zrealizowaniu całości materiału z poprzednich zajęć.
-1. W pliku `pom.xml` dodałem dwa pluginy (szczegóły znajdziesz właśnie tam):
-    1. [`frontend-maven-plugin`](https://github.com/eirslett/frontend-maven-plugin) odpowiedzialny za pobranie Node JS
-       do projektu, pobranie
-       zależności z NPM podczas `mvn install` i zbudowanie aplikacji za pomocą komendy
-       `npm run build` przy budowaniu archiwum war aplikacji.
-    1. [`maven-resources-plugin`](https://maven.apache.org/plugins/maven-resources-plugin/) odpowiedzialny za
-       skopiowanie zbudowanej aplikacji frontendowej
-       do katalogu `src/main/resources/public`, czyli katalogu skąd [Spring Boot domyślnie
-       serwuje statyczne pliki](https://spring.io/blog/2013/12/19/serving-static-web-content-with-spring-boot).
-1. W pliku `src/main/frontend/package.json` dodałem konfigurację
+1. W pliku `ui/package.json` dodałem konfigurację
    [proxy dla dev-servera](https://create-react-app.dev/docs/proxying-api-requests-in-development/).
    aby komunikacja frontendu i backendu działała w trybie deweloperskim.
-1. W klasach kontrolerów dopisałem do adnotacji `@RequestMapping` prefixy endpointów tak,
-   że teraz mapują one odpowiednio na `@RequestMapping("/api/meetings")` oraz
-   `@RequestMapping("/api/participants")`. Jednolity prefix do endpointów restowych
-   umożliwia łatwe odróżnienie części frontendowej aplikacji od części backendowej,
-   gdy używamy aplikacyjnych adresów URL.
-1. Usunąłem `enroller.db`, dodałem jego ścieżkę do `.gitignore` oraz w pliku
-   `src/main/resources/` dodałem [jeszcze jeden parametr](https://stackoverflow.com/a/28671036/878514)
-   dzięki któremu schemat bazy danych generuje się sam.
-   ```xml
-   <property name="hibernate.hbm2ddl.auto">create</property>
+1. Gdy aplikacja będzie zdeployowana (frontend będzie zbudowany), Fast API zajmie się
+   serwowaniem aplikacji frontendowej za pomocą konfiguracji:
+   ```py
+   app.mount("/static", StaticFiles(directory="../ui/build/static", check_dir=False), name="static")
+   ```
+1. Ponado, na stronie głównej zostanie wyrenderowany plik `index.html`, który uruchomi
+   Reactową aplikację.
+   ```py
+   @app.get("/")
+   def serve_react_app():
+      return FileResponse("../ui/build/index.html")
    ```
 
 Jeśli chcesz użyć kodu swoich dotychczasowych aplikacji (np. w domu) wykonaj
-powyższe kroki i "ma działać".
+powyższe kroki i powinno działać.
