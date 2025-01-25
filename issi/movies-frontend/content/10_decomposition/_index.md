@@ -81,34 +81,6 @@ Zauważ, że komponent `App.js` nie musi już wiedzieć o tym, co jest wpisane w
 formularza logowania. Interesuje go tylko to, jakie finalnie dane wpisał użytkownik. W ten sposób
 ściągnęliśmy z głównego komponentu jedną odpowiedzialność.
 
-## Wpływanie na zachowanie komponentów
-
-Aby dostrzec zalety wydzielania funkcjonalności aplikacji do komponentów - wzbogaćmy
-komponent formularza filmu o możliwość definiowania etykiety przycisku.
-
-Spróbuj na podstawie wcześniejszych informacji umożliwić skonfigurowanie
-etykiety przycisku w formularzu filmu. W ten sposób będzie można zdefiniować do czego
-formularz jest wykorzystywany.
-
-Poniższy kod powinien wyświetlić dwa formularze, każdy z inną etykietą.
-
-```jsx
-<MovieForm onMovieSubmit={(movie) => setMovies([...movies, movie])} buttonLabel="Add a movie"/>
-<MovieForm onMovieSubmit={(movie) => setMovies([...movies, movie])} buttonLabel="Search for a movie"/>
-```
-
-Niezależnie od tego, którego formularza użyjesz, film powinien dodać się do listy.
-Dzięki temu jednak możesz wykorzystać ten sam formularz (komponent), by zrealizować
-różne funkcjonalności w systemie (w inny sposób reagować na zdarzenie).
-
-{{% expand title="Spróbuj napisać **samodzielnie**, zanim klikniesz :-)" %}}
-
-```jsx
-<button>{props.buttonLabel || 'Submit'}</button>
-```
-
-{{% /expand %}}
-
 ## Wydziel komponent wyświetlający listę filmów i pojedynczy film
 
 Analogicznie do poprzednich działań, wydziel komponent zawierający renderujący
@@ -123,7 +95,7 @@ function App() {
         <div>
            <h1>My favourite movies to watch</h1>
            <MoviesList movies={movies}/>
-           <MovieForm onMovieSubmit={(movie) => setMovies([...movies, movie])} buttonLabel="Add a movie"/>
+           <MovieForm onMovieSubmit={(movie) => setMovies([...movies, movie])}/>
         </div>
    );
 }
