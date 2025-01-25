@@ -15,9 +15,9 @@ Pamiętaj o uruchomieniu backendu -
 komenda `uvicorn main:app --reload` wykonana w katalogu `api`.
 {{% /notice %}}
 
-1. Znajdź komponent, który reaguje na dodanie nowego spotkania.
-1. Zanim dodasz spotkanie do listy, wyślij odpowiednie żądanie na backend. Pokaż użytkownikowi,
-   że spotkanie się dodało, dopiero gdy backend potwierdzi wykonanie operacji.
+1. Znajdź komponent, który reaguje na dodanie nowego filmu.
+1. Zanim dodasz film do listy, wyślij odpowiednie żądanie na backend. Pokaż użytkownikowi,
+   że film się dodał, dopiero gdy backend potwierdzi wykonanie operacji.
    ```jsx
    async function handleAddMovie(movie) {
      const response = await fetch('/movies', {
