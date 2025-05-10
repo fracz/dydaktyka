@@ -63,46 +63,6 @@ Zauważ, że komponent `App.js` nie musi już wiedzieć o tym, co jest wpisane w
 formularza logowania. Interesuje go tylko to, kto jest "zalogowany". W ten sposób
 ściągnęliśmy z głównego komponentu jedną odpowiedzialność.
 
-## Wpływanie na zachowanie komponentów
-
-Aby dostrzec zalety wydzielania funkcjonalności aplikacji do komponentów - wzbogaćmy
-komponent formularza logowania o możliwość definiowania etykiety przycisku.
-
-Spróbuj na podstawie wcześniejszych informacji umożliwić skonfigurowanie
-etykiety przycisku w formularzu logowania.
-
-Poniższy kod powinien wyświetlić trzy formularze, każdy z inną etykietą.
-
-```jsx
-<LoginForm onLogin={login}/>
-<LoginForm onLogin={login} buttonLabel="Zarejestruj się"/>
-<LoginForm onLogin={login} buttonLabel="Zapisz się na newsletter"/>
-```
-
-Niezależnie od tego, którego formularza użyjesz, powinieneś "zalogować się" do aplikacji.
-Dzięki temu jednak możesz wykorzystać ten sam formularz (komponent), by zrealizować
-różne funkcjonalności w systemie.
-
-{{% expand title="Spróbuj napisać **samodzielnie**, zanim klikniesz :-)" %}}
-
-```jsx {hl_lines="3,10"}
-import {useState} from "react";
-
-export default function LoginForm({onLogin, buttonLabel}) {
-   const [email, setEmail] = useState('');
-
-   return <div>
-      <label>Zaloguj się e-mailem</label>
-      <input type="text" value={email} onChange={(e) => setEmail(e.target.value)}/>
-      <button type="button" onClick={() => onLogin(email)}>
-         {buttonLabel || 'Wchodzę'}
-      </button>
-   </div>;
-}
-```
-
-{{% /expand %}}
-
 ## Wydziel komponent ze stanem aplikacji po zalogowaniu
 
 Analogicznie do poprzednich działań, wydziel komponent zawierający informację o
