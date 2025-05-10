@@ -6,7 +6,7 @@ weight: 20
 
 ## Uruchomienie aplikacji
 
-1. Wykonaj fork i sklonuj repozytorium [react-lab](https://github.com/fracz/react-lab) *do katalogu /mnt/workspaces/private*, jeśli pracjesz na komputerze w sali.
+1. Wykonaj fork i sklonuj repozytorium [react-lab](https://github.com/fracz/react-lab) **do katalogu `/mnt/workspaces/private`**, jeśli pracjesz na komputerze w sali.
 
    ```
    cd /mnt/workspaces/private
