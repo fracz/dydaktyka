@@ -20,15 +20,9 @@ Oto lista zmian w stosunku do stanu aplikacji z poprzednich zajęć:
 1. Utworzyłem katalog `src/main/frontend` i wrzuciłem do niego całą zawartość projektu
    frontendowego z ostatnich zajęć. Aplikacja jest w takim stanie, w jakim powinna
    być po zrealizowaniu całości materiału z poprzednich zajęć.
-1. W pliku `pom.xml` dodałem dwa pluginy (szczegóły znajdziesz właśnie tam):
-    1. [`frontend-maven-plugin`](https://github.com/eirslett/frontend-maven-plugin) odpowiedzialny za pobranie Node JS
-       do projektu, pobranie
-       zależności z NPM podczas `mvn install` i zbudowanie aplikacji za pomocą komendy
-       `npm run build` przy budowaniu archiwum war aplikacji.
-    1. [`maven-resources-plugin`](https://maven.apache.org/plugins/maven-resources-plugin/) odpowiedzialny za
-       skopiowanie zbudowanej aplikacji frontendowej
-       do katalogu `src/main/resources/public`, czyli katalogu skąd [Spring Boot domyślnie
-       serwuje statyczne pliki](https://spring.io/blog/2013/12/19/serving-static-web-content-with-spring-boot).
+1. W pliku `src/main/frontend/.env` dodałem zmienną środowiskową `BUILD_PATH=../resources/public`, dzięki której
+   aplikacja frontendowa jest budowana do katalogu `src/main/resources/public`,
+   czyli katalogu skąd [Spring Boot domyślnie serwuje statyczne pliki](https://spring.io/blog/2013/12/19/serving-static-web-content-with-spring-boot).
 1. W pliku `src/main/frontend/package.json` dodałem konfigurację
    [proxy dla dev-servera](https://create-react-app.dev/docs/proxying-api-requests-in-development/).
    aby komunikacja frontendu i backendu działała w trybie deweloperskim.
