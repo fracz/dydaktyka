@@ -5,7 +5,7 @@ weight: 65
 ---
 
 Uruchom aplikację z Twojego sforkowanego repozytorium na platformie 
-[back4app](https://back4app.com).
+[render.com](https://render.com).
 
 Jeśli nie pamiętasz jak, zerknij do instrukcji z 
 [poprzednich ćwiczeń](https://jdajda.github.io/mwo/web2-lab2/05_deployment/).
