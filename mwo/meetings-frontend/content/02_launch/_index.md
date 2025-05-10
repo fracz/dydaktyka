@@ -6,13 +6,13 @@ weight: 20
 
 ## Uruchomienie aplikacji
 
-1. Wykonaj fork i sklonuj repozytorium [react-lab](https://github.com/fracz/react-lab) **do katalogu `/mnt/workspaces/private`**, jeśli pracjesz na komputerze w sali.
+1. Wykonaj fork i sklonuj repozytorium [react-lab](https://github.com/fracz/react-lab). Użyj katalogu **`/mnt/workspaces/private`**, jeśli pracjesz na komputerze w sali.
 
    ```
    cd /mnt/workspaces/private
    git clone ADRES_TWOJEGO_FORKA
    cd react-lab
-   npm install --cache ../cache
+   npm install --cache ../npm-cache
    ```
 
    Wejdź do katalogu projektu. Zaimportuj projekt do IDE.
@@ -21,7 +21,7 @@ weight: 20
    Kod w tym repozytorium jest wygenerowany komendą `npx create-react-app react-lab`. NIE wykonuj jej :)
    {{% /notice %}}
 
-2. Pobierz zależności zdefiniowane w pliku `package.json` za pomocą komendy
+2. Jeśli nie zostało to wykonane w kroku pierwszym, pobierz zależności zdefiniowane w pliku `package.json` za pomocą komendy
    `npm install`. Może to potrwać dłuższą chwilę. To normalne, że na tym etapie
    otrzymujesz informacje o _deprecations_ oraz ostrzeżenia o naruszeniach
    bezpieczeństwa. Witamy w świecie frameworków JS :-)
