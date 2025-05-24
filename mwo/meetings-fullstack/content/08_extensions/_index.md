@@ -15,8 +15,8 @@ Kilka pomysłów na rozbudowę naszej aplikacji.
   JWT i autoryzację o nie opartą, dlaczego by nie przenieść tego teraz także do aplikacji
   frontendowej? Dodaj formularz zakładania konta i logowania i pokaż listę spotkań
   tylko użytkownikom, którzy zalogują się do aplikacji.
-* Zapamiętuj zalogowanego użytkownika
+* **Zapamiętuj zalogowanego użytkownika**
   w [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
   tak, aby odświeżenie strony nie powodowało konieczności ponownego wpisywania nazwy użytkownika
-* [Wyślij maila potwierdzającego przy zapisaniu się na spotkanie](http://www.baeldung.com/spring-email).
+* [**Wyślij maila potwierdzającego** przy zapisaniu się na spotkanie](http://www.baeldung.com/spring-email).
   Powinien zawierać datę zapisania się, nazwę, opis oraz datę spotkania.
