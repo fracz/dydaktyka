@@ -81,7 +81,7 @@ Zauważ, że komponent `App.js` nie musi już wiedzieć o tym, co jest wpisane w
 formularza logowania. Interesuje go tylko to, jakie finalnie dane wpisał użytkownik. W ten sposób
 ściągnęliśmy z głównego komponentu jedną odpowiedzialność.
 
-## Wydziel komponent wyświetlający listę filmów i pojedynczy film
+## Wydziel komponent wyświetlający listę filmów
 
 Analogicznie do poprzednich działań, wydziel komponent zawierający renderujący
 listę filmów do wyświetlenia. Wewnątrz niego, każdy film także powinien być wyświetlany
