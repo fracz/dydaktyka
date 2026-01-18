@@ -12,7 +12,7 @@ komenda `npm start` wykonana w katalogu `ui`.
 
 {{% notice style="info" title="Uruchom serwer frontendu" icon="wrench" %}}
 Pamiętaj o uruchomieniu backendu -
-komenda `uvicorn main:app --reload` wykonana w katalogu `api`.
+komenda `fastapi dev main.py` wykonana w katalogu `api`.
 {{% /notice %}}
 
 1. Znajdź komponent, który reaguje na dodanie nowego filmu.
